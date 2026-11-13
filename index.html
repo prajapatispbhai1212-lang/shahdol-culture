@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahdol District Portal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7f5;
+    color: #222;
+}
+
+header {
+    background: #075e45;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+nav {
+    background: #064c39;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #15966b;
+}
+
+.hero {
+    min-height: 380px;
+    background:
+    linear-gradient(#0008, #0008),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e")
+    center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.search {
+    text-align: center;
+    padding: 25px;
+}
+
+.search input {
+    width: 90%;
+    max-width: 550px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.section-title {
+    text-align: center;
+    color: #075e45;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #0001;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #087452;
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.info {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    box-shadow: 0 3px 12px #0001;
+}
+
+footer {
+    background: #064c39;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+button {
+    background: #087452;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #064c39;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Shahdol District Portal</h1>
+    <p>मध्य प्रदेश के शहडोल जिले की जानकारी</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">परिचय</a>
+    <a href="#history">इतिहास</a>
+    <a href="#tourism">पर्यटन</a>
+    <a href="#education">शिक्षा</a>
+    <a href="#culture">संस्कृति</a>
+    <a href="#contact">संपर्क</a>
+</nav>
+
+<section class="hero" id="home">
+    <div>
+        <h2>आपका स्वागत है शहडोल में</h2>
+        <p>प्राकृतिक सुंदरता, इतिहास और संस्कृति की धरती</p>
+        <br>
+        <a href="#about">
+            <button>और जानें</button>
+        </a>
+    </div>
+</section>
+
+<div class="search">
+    <input type="text" id="searchBox"
+    placeholder="जानकारी खोजें... जैसे इतिहास, पर्यटन, शिक्षा">
+</div>
+
+<main class="container">
+
+<section id="about">
+    <h2 class="section-title">शहडोल का परिचय</h2>
+    <div class="info">
+        <p>
+        शहडोल मध्य प्रदेश का एक महत्वपूर्ण जिला है।
+        यह अपने प्राकृतिक संसाधनों, वन क्षेत्रों,
+        ऐतिहासिक स्थलों और आदिवासी संस्कृति के लिए
+        जाना जाता है। शहडोल संभाग का मुख्यालय भी है।
+        </p>
+        <p>
+        यहां की स्थानीय संस्कृति, परंपराएं और
+        प्राकृतिक सुंदरता जिले को विशेष पहचान देती हैं।
+        </p>
+    </div>
+</section>
+
+<section id="history">
+    <h2 class="section-title">शहडोल का इतिहास</h2>
+    <div class="info">
+        <p>
+        शहडोल का इतिहास क्षेत्र की प्राचीन सांस्कृतिक
+        और ऐतिहासिक विरासत से जुड़ा हुआ है।
+        यहां कई प्राचीन मंदिर और ऐतिहासिक स्थल मौजूद हैं।
+        विराटेश्वर मंदिर इस क्षेत्र की महत्वपूर्ण
+        ऐतिहासिक धरोहरों में से एक है।
+        </p>
+    </div>
+</section>
+
+<section id="tourism">
+    <h2 class="section-title">प्रमुख पर्यटन स्थल</h2>
+
+    <div class="grid">
+
+        <div class="card searchable">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada"
+            alt="भारतीय मंदिर">
+            <div class="card-content">
+                <h3>विराटेश्वर मंदिर</h3>
+                <p>
+                सोहागपुर स्थित प्राचीन विराटेश्वर मंदिर
+                अपनी ऐतिहासिक और धार्मिक महत्ता के लिए
+                प्रसिद्ध है।
+                </p>
+            </div>
+        </div>
+
+        <div class="card searchable">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="प्राकृतिक दृश्य">
+            <div class="card-content">
+                <h3>बाणसागर बांध</h3>
+                <p>
+                बाणसागर बांध सोन नदी पर बना एक महत्वपूर्ण
+                बहुउद्देशीय बांध है। यह क्षेत्र का एक
+                प्रसिद्ध स्थल है।
+                </p>
+            </div>
+        </div>
+
+        <div class="card searchable">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b"
+            alt="जंगल">
+            <div class="card-content">
+                <h3>वन क्षेत्र</h3>
+                <p>
+                शहडोल जिले में प्राकृतिक वन क्षेत्र और
+                हरियाली देखने को मिलती है।
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="education">
+    <h2 class="section-title">शिक्षा</h2>
+    <div class="info">
+        <p>
+        शहडोल में विभिन्न सरकारी एवं निजी स्कूल,
+        महाविद्यालय और उच्च शिक्षा संस्थान उपलब्ध हैं।
+        जिले में शिक्षा के विकास के लिए कई संस्थाएं
+        कार्य कर रही हैं।
+        </p>
+    </div>
+</section>
+
+<section id="culture">
+    <h2 class="section-title">कला और संस्कृति</h2>
+    <div class="info">
+        <p>
+        शहडोल की संस्कृति में स्थानीय परंपराओं,
+        आदिवासी जीवनशैली, लोकगीत, लोकनृत्य और
+        पारंपरिक त्योहारों का विशेष महत्व है।
+        यहां की सांस्कृतिक विविधता जिले की पहचान है।
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">संपर्क करें</h2>
+    <div class="info">
+        <p>शहडोल जिला प्रशासन की आधिकारिक वेबसाइट:</p>
+        <p>
+        <a href="https://shahdol.nic.in/"
+        target="_blank">
+        shahdol.nic.in
+        </a>
+        </p>
+        <br>
+        <p>अपना सुझाव हमें भेजें:</p>
+        <br>
+        <input id="name" type="text"
+        placeholder="अपना नाम लिखें"
+        style="padding:10px;width:100%;margin-bottom:10px">
+
+        <textarea id="message"
+        placeholder="अपना सुझाव लिखें"
+        style="padding:10px;width:100%;height:100px"></textarea>
+
+        <br><br>
+        <button onclick="sendMessage()">भेजें</button>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <h3>Shahdol District Information Portal</h3>
+    <p>© 2026 Shahdol Information Project</p>
+    <p>Made with ❤️</p>
+</footer>
+
+<script>
+
+// Search functionality
+document.getElementById("searchBox")
+.addEventListener("input", function() {
+
+    let value = this.value.toLowerCase();
+
+    let sections = document.querySelectorAll(
+        "main section"
+    );
+
+    sections.forEach(function(section) {
+
+        let text = section.innerText.toLowerCase();
+
+        section.style.display =
+            text.includes(value) ? "block" : "none";
+
+    });
+
+});
+
+// Contact form
+function sendMessage() {
+
+    let name = document.getElementById("name").value;
+    let message = document.getElementById("message").value;
+
+    if(name.trim() === "" || message.trim() === "") {
+        alert("कृपया सभी जानकारी भरें!");
+        return;
+    }
+
+    alert("धन्यवाद " + name +
+    "! आपका सुझाव दर्ज किया गया है।");
+
+    document.getElementById("name").value = "";
+    document.getElementById("message").value = "";
+}
+
+</script>
+
+</body>
+</html>
